@@ -219,7 +219,7 @@ Oauth error invalid_request: The redirect_uri is not whitelisted
 
 To solve this we need to login to our partners dashboard, go to our App Info and add `YOUR_HTTPS_NGROK_URL/auth/callback` to "Whitelisted redirection URL(s)" textarea.
 
-Now if you try to authenicate again, (`YOUR_HTTPS_NGROK_URL/auth?shop=YOUR_SHOP_DOMAIN`) it should take you to install the app in the Shopify admin. Once its installed you can verify it shows by going to to `YOUR_SHOPIFY_URL/admin/apps`.
+Now if you try to authenicate again, (`YOUR_HTTPS_NGROK_URL/auth?shop=YOUR_SHOP_DOMAIN`) it should take you to install the app in the Shopify admin. Once its installed you can verify it shows by going to `YOUR_SHOPIFY_URL/admin/apps`.
 
 We now have an authentication route, but users can still go straight to our index without logging in. You can verifiy this by clearing your cookies or loading the your ngrok url in an icognito tab. The next step will protect our `Hello Unite` with a verification middleware.
 
@@ -397,7 +397,7 @@ _app/App.js_
 
 Unfortunately, this code won't actually work yet.
 
-This is due to the fact that we are missing one crucial piece of a modern web app; client side Javascript. We will need to be able run our React code in the browser to rectify this.
+This is due to the fact that we are missing one crucial piece of a modern web app: client side Javascript. We will need to be able run our React code in the browser to rectify this.
 
 #### Step 3: React in the Browser
 
@@ -640,7 +640,7 @@ _app/App.js_
 
 We want to call our mutation when a game's `Create Product` button is clicked. We can do this by passing a function into the `onAddGame` prop of our `<GameList />` component. Our `<GameList />`'s `onAddGame` callback is passed the name of the clicked game.
 
-We can pass this along to our `createProduct` mutation function as the `title`, along with a `productType` of "borad game".
+We can pass this along to our `createProduct` mutation function as the `title`, along with a `productType` of "board game".
 
 ```js
 <Mutation mutation={CREATE_PRODUCT}>
