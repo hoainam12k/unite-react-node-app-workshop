@@ -151,7 +151,7 @@ import createShopifyAuth from '@shopify/koa-shopify-auth';
 
 _server/index.js_
 
-We can mount our middlware by adding the following lines after we intialize our new Koa app.
+We can mount our middleware by adding the following lines after we intialize our new Koa app.
 
 ```js
 app.use(session(app));
